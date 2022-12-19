@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-nunito text-[#111517] dark:text-white bg-[#F2F2F2] dark:bg-[#202C36];
+  }
+
+  section {
+    @apply py-2 sm:py-4 md:py-6 lg:py-8 xl:py-10 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20;
+  }
+
+  header {
+    @apply flex items-center justify-between shadow-main-shadow px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-5 md:py-4 lg:py-5 bg-white dark:bg-main-black z-50;
+  }
+
+  h1 {
+    @apply text-lg sm:text-xl md:text-2xl font-bold;
+  }
+
+  h2 {
+    @apply truncate text-xl ss:text-lg font-bold;
+  }
+
+  li {
+    @apply font-semibold ss:text-sm;
+  }
+
+  p {
+    @apply hidden ss:block text-[16px] md:text-lg;
+  }
+
+  span {
+    @apply font-light;
+  }
+
+  input,
+  select {
+    @apply text-sm p-3 ss:p-4 sm:p-3 xl:p-4 shadow-main-shadow dark:bg-main-black rounded-[5px] outline-none;
+  }
+}
+
+@layer components {
+  .article-box {
+    @apply rounded-b-[5px] h-96 ss:h-[340px] shadow-main-shadow;
+  }
+
+  .article-img {
+    @apply w-full sm:w-[65%] lg:w-[45%] h-[200px] sx:h-[250px] ss:h-[300px] sm:h-[350px] xl:h-[400px] object-fill rounded-lg;
+  }
+
+  .article-content {
+    @apply grid grid-rows-8 sm:grid-rows-4 grid-flow-col gap-y-4 gap-x-20;
+  }
+
+  .article-list {
+    @apply flex flex-col gap-y-5 sm:flex-row items-start sm:items-center gap-x-6 mt-10 sm:mt-0;
+  }
+
+  .article-item {
+    @apply font-thin text-[11px] ss:text-sm bg-white dark:bg-main-dark shadow-border-shadow px-2 ss:px-4 lg:px-2 py-1 rounded-sm;
+  }
+
+  .filter-block {
+    @apply flex flex-col sm:flex-row items-start sm:items-center justify-between pt-20 pb-10;
+  }
+
+  .countries-block {
+    @apply grid grid-cols-1 ss:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 ss:gap-8 lg:gap-12 xl:gap-14 pt-10 pb-28 sx:px-10 ss:px-0;
+  }
+
+  .country-block {
+    @apply flex items-center justify-center gap-x-2 bg-[#F2F2F2] dark:bg-main-dark shadow-border-shadow  w-28 py-2 rounded-[6px];
+  }
+
+  .pagination-block {
+    @apply fixed left-0 bottom-0 w-full flex items-center justify-center py-5 gap-x-1.5 sx:gap-x-2 ss:gap-x-5 bg-white dark:bg-main-black;
+  }
+
+  .pagination-item {
+    @apply dark:bg-white bg-main-black dark:text-main-black text-white rounded-[5px] shadow-main-shadow py-1 px-2;
+  }
+}
