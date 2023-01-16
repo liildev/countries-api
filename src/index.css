@@ -83,4 +83,22 @@
   .pagination-item {
     @apply dark:bg-white bg-main-black dark:text-main-black text-white rounded-[5px] shadow-main-shadow py-1 px-2;
   }
+
+  .pagination-sticky {
+    @apply fixed left-0 bottom-0 w-full flex items-center justify-center;
+    @apply py-5 gap-x-3 ss:gap-x-5 bg-white dark:bg-main-black opacity-0 z-50;
+
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 7%);
+    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
 }

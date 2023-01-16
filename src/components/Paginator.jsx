@@ -17,19 +17,17 @@ export default function PaginatedItems({ data }) {
         ))}
       </div>
 
-      {scrolled && (
-        <ReactPaginate
-          className="pagination-block"
-          activeClassName="pagination-item"
-          breakLabel="..."
-          nextLabel={<IoIosArrowForward size={30} />}
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-          previousLabel={<IoIosArrowBack size={30} />}
-          renderOnZeroPageCount={null}
-        />
-      )}
+      <ReactPaginate
+        className={`pagination-sticky ${scrolled && "visible"}`}
+        activeClassName="pagination-item"
+        breakLabel="..."
+        nextLabel={<IoIosArrowForward size={30} />}
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={1}
+        pageCount={pageCount}
+        previousLabel={<IoIosArrowBack size={30} />}
+        renderOnZeroPageCount={null}
+      />
     </>
   );
 }
